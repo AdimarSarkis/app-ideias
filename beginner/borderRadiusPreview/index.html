@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body onload="reset()">
+    <main>
+        <h1>Border Radius Generator</h1>
+
+        <div class="container">
+            <div class="shape"></div>
+            <div class="container-inputs">
+                <label for="top-left">Ponto Superior Esquerdo</label>
+                <input type="range" min="0" max="100" id="top-left">
+                <label for="top-right">Ponto Superior Direito</label>
+                <input type="range" min="0" max="100" id="top-right">
+                <label for="bottom-left">Ponto Inferior Esquerdo</label>
+                <input type="range" min="0" max="100" id="bottom-left">
+                <label for="bottom-right">Ponto Inferior Direito</label>
+                <input type="range" min="0" max="100" id="bottom-right">
+            </div>
+        </div>
+        <div class="container-copy">
+            <p>Border Radius: </p>
+            <input type="text" value="100% 0% 100% 0% / 0% 100% 0% 100%" id="borderRadius">
+            <div class="tooltip">
+                <button onclick="copy()" onmouseout="saidaMouse()">
+                  <span class="tooltiptext" id="Tooltip">Copy to clipboard</span>
+                  Copy text
+                  </button>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>

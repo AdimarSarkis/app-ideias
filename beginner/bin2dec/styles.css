@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #efeceb;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-template-rows: 150px;
+    gap: 20px;
+    height: 100vh;
+    padding: 10px;
+}
+.form{
+    border: 1px solid #000;
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+    -webkit-box-shadow: 3px 6px 12px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 6px 12px 3px rgba(0,0,0,0.75);
+    box-shadow: 3px 6px 12px 3px rgba(0,0,0,0.75);
+}
+button{
+    background-color: darkcyan;
+    color: aliceblue;
+    cursor: pointer;
+}
