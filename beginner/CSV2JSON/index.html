@@ -9,19 +9,33 @@
 <body>
     <main>
         <div class="container">
-            <textarea name="" id="" class="box" placeholder="Escreva aqui..."></textarea>
-            <button class="upfile btn">UPDATE FILE</button>
+            <textarea id="entrada" class="box" placeholder="Escreva aqui..."></textarea>
+            <input type="file" class="upfile btn" onchange="lerArquivo(this.files)"></input>
         </div>
         <div class="container">
-            <button class="btn">CSV</button>
-            <button class="btn">JSON</button>
+            <button class="btn" id="csv" onclick="converterParaCsv()">CSV</button>
+    <button class="btn" onclick="converterParaJson()">JSON</button>
         </div>
         <div class="container">
-            <input type="text" class="box" />
+            <textarea type="text" id="saida" class="box" disabled></textarea>
             <div class="container-btn">
-                <button class="btn btn-download"></button>
-                <button class="btn btn-delete"></button>
-                <button class="btn btn-copy"></button>
+                <div class="tooltip">
+                    <a href="" download="converter.json"><button class="btn btn-download" onclick="handleDownload()">
+                        <span class="tooltiptext" id="TooltipDownload">Download</span>
+                    </button></a>
+                </div>
+                <div class="tooltip">
+                    <button class="btn btn-delete" onclick="handleDelete()">
+                        <span class="tooltiptext" id="TooltipDelete">Delete</span>
+                    </button>
+
+                </div>
+                <div class="tooltip">
+                    <button class="btn btn-copy" onclick="copy()">
+                        <span class="tooltiptext" id="TooltipCopy">Copy to clipboard</span>
+                    </button>
+
+                </div>
             </div>
         </div>
     </main>
