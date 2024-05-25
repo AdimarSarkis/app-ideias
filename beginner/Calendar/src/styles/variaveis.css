@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --ColorPrimary: #C04840;
+    --body-bg: #DBC2C2;
+    --color-font: #333;
+
+}
+
+.dark-mode:root{
+    --ColorPrimary: #7DB952;
+    --body-bg: #333;
+    --color-font: #fafafa
+}
+

@@ -1,0 +1,181 @@
+@import "variaveis.css";
+
+nav {
+  grid-area: navbar;
+}
+
+nav > ul {
+  display: flex;
+  height: 100vh;
+  width: 10rem;
+  z-index: 1;
+  position: fixed;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 100px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  box-shadow: 9px 2px 20px 3px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 9px 2px 20px 3px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 9px 2px 20px 3px rgba(0, 0, 0, 0.63);
+  text-transform: uppercase;
+    background-color: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  z-index: 10;
+  padding: 20px;
+  padding-right: 100px;
+  color: var(--color-font);
+}
+
+ul > li {
+  cursor: pointer;
+  width: 110%;
+  height: 50px;
+  text-align: start;
+  padding: 15px;
+  overflow: hidden;
+  color: var(--color-font);
+}
+
+ul > li > .hoverDetails {
+  background-color: var(--ColorPrimary);
+  height: 30px;
+  width: 43px;
+  position: relative;
+  left: 130px;
+  bottom: 10px;
+  rotate: -20deg;
+  z-index: -1;
+  opacity: 0;
+}
+ul > li:not(:last-child)::after {
+  content: "";
+  width: 119%;
+  left: 175px;
+  height: 255%;
+  position: relative;
+  display: none;
+  bottom: 65px;
+  background-color: var(--ColorPrimary);
+  z-index: -1000;
+}
+a:hover {
+  color: aliceblue;
+}
+ul > li:hover:not(:last-child)::after {
+  display: block;
+  animation: linkHover ease-out 0.5s forwards;
+  animation-delay: 0.1s;
+}
+#nav-icon1 {
+  display: none;
+  width: 50px;
+  height: 20px;
+  position: fixed;
+bottom: 700px;
+left: 20px;
+padding: 10px;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon1 span {
+  display: none;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: var(--ColorPrimary);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  nav > ul {
+    display: none;
+    z-index: 100;
+    overflow: hidden;
+  }
+  #nav-icon1 {
+    display: block;
+    bottom: 550px;
+    z-index: 200;
+  }
+  #nav-icon1 span {
+    display: block;
+  }
+
+  #nav-icon1 span:nth-child(1) {
+    top: 0px;
+  }
+
+  #nav-icon1 span:nth-child(2) {
+    top: 18px;
+  }
+
+  #nav-icon1 span:nth-child(3) {
+    top: 36px;
+  }
+
+  #nav-icon1 .open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  #nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  #nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}
+
+@media (max-height: 652px){
+    #nav-icon1 {
+        display: block;
+        bottom: 480px;
+        z-index: 200;
+      }
+}
+
+@keyframes linkHover {
+  from {
+    position: relative;
+    left: 175px;
+    display: none;
+  }
+  to {
+    z-index: -10;
+    position: relative;
+    left: 0;
+    display: block;
+  }
+}

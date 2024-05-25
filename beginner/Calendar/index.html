@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <nav>
+        <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>
+                <a href="#">eventos</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <a href="#">Calendario</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <a href="#">Conta</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <div class="checkbox-wrapper-54">
+                    <label class="switch">
+                        <input type="checkbox" id="switch">
+                      <span class="slider"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="apresentacao">
+            <h1>Calendario Eventos</h1>
+            <h2>
+                Faça o login para nunca perder seus eventos mais preciosos
+            </h2>
+        </div>
+
+        <div class="container-btn">
+            <button onclick="testeUrl()">login</button>
+            <button class="cadastre">cadastre-se</button>
+        </div>
+    </main>
+    
+    <script>
+        const testeUrl = () => {
+            const urlAtual = location;
+            const novaUrl = `${urlAtual}login.html`;
+            const url = location.assign(`${novaUrl}`)
+            console.log("url: "+url)
+        }
+    </script>
+    <script src="./src/js/index.js" type="module"></script>
+</body>
+</html>

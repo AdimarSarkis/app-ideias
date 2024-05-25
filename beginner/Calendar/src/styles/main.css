@@ -1,0 +1,26 @@
+@import "home.css";
+@import "navbar.css";
+@import "variaveis.css";
+@import "toggle-btn.css";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "navbar conteudo";
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    overflow: hidden;
+    background-color: var(--body-bg);
+    color: var(--color-font); 
+    font-family: "lora", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--color-font);
+}
