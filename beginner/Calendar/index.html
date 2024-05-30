@@ -46,15 +46,15 @@
         </div>
 
         <div class="container-btn">
-            <button onclick="testeUrl()">login</button>
-            <button class="cadastre">cadastre-se</button>
+            <button onclick="irTelaLogin('login')">login</button>
+            <button class="cadastre" onclick="irTelaLogin('signup')">cadastre-se</button>
         </div>
     </main>
     
     <script>
-        const testeUrl = () => {
+        const irTelaLogin = (tela) => {
             const urlAtual = location;
-            const novaUrl = `${urlAtual}login.html`;
+            const novaUrl = `${urlAtual}login.html?#${tela}`;
             const url = location.assign(`${novaUrl}`)
             console.log("url: "+url)
         }
