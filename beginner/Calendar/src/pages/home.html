@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <nav>
+        <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>
+                <a href="/eventos" onclick="route()">eventos</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <a href="/calandar" onclick="route()">Calendario</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <a href="/conta" onclick="route()">Conta</a>
+                <div class="hoverDetails"></div>
+            </li>
+            <li>
+                <div class="checkbox-wrapper-54">
+                    <label class="switch">
+                        <input type="checkbox" id="switch">
+                      <span class="slider"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container-page" style="border: 1px solid black;">
+    </main>
+    
+    <script src="../js/router.js" type="module"></script>
+    <script src="../js/index.js" type="module"></script>
+</body>
+</html>

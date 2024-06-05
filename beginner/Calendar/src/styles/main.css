@@ -1,7 +1,8 @@
-@import "home.css";
+@import "apresentacao.css";
 @import "navbar.css";
 @import "variaveis.css";
 @import "toggle-btn.css";
+@import "home.css";
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 body{

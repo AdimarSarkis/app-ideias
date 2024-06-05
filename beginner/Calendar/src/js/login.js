@@ -110,7 +110,7 @@ const logar = (e) => {
   });
 
   if(usuarioEmail == userValid.email && usuarioSenha == userValid.senha){
-    alert("deu certo");
+    location.assign("./home.html");
   }else{
     alert("Email e/ou Senha incorretos");
   }
